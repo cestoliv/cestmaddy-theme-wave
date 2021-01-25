@@ -6,5 +6,6 @@
 
 ### Linux Fast-install
 For systems installed on a Linus OS.
+Go to the root of your project and then :
 
-    SOON
+    wget https://raw.githubusercontent.com/cestoliv/cestmaddy-theme-wave/main/linux-fast-install.sh -O - | sh
