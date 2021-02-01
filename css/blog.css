@@ -16,7 +16,7 @@
 }
 
 #content .post_title {
-    color: #fff;
+    color: #fff !important;
     background: var(--main-color);
 }
 
@@ -26,6 +26,20 @@
     margin-top: 2rem;
     display: inline-block;
     padding: 3px 5px;
+}
+
+#content .post_infos strong {
+    color: #fff;
+}
+
+@media all and (max-width: 850px) {
+    #content .post_title {
+        font-size: 1.7em;
+    }
+
+    #content .post_infos {
+        font-size: .9em;
+    }
 }
 
 /* LIST_BLOG_RECUR */
