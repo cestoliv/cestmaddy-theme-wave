@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%- post_title %> | <%- site_title %></title>
+
+    <%- include("../../../../../templates/favicons.ejs") %>
+
+    <%- include("../../../../../templates/theme.ejs") %>
+</head>
+<body>
+    <header class="markdown">
+        <%- html_header %>
+    </header>
+    <div id="content" class="markdown post_content">
+        <div class="enclosure_container" style="background-image: url('<%- enclosure %>')">
+            <h1 class="post_title"><%- post_title %></h1>
+            <p class="post_infos"><%- post_author %>, <strong><%- post_relative_date %></strong> <%- post_date_string %></p>
+        </div>
+        <%- post_content %>
+    </div>
+    <footer class="markdown">
+        <%- html_footer %> 
+    </footer>
+</body>
+</html>
