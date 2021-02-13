@@ -6,4 +6,4 @@ git clone https://github.com/cestoliv/cestmaddy-theme-wave.git res/content/front
 sed -i "s?^.*theme:.*?  theme: \"wave\"?g" config.yml
 
 # REBUILD WEBSITE
-npm run build && npm run minify
+npm run generate

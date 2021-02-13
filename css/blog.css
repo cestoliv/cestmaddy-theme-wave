@@ -79,7 +79,7 @@ ul.list_blog_recur > li > a > p {
 }
 ul.list_blog_recur > li > a > p.blog_list_recur_post_date {
     font-size: .9em;
-    color: var(--main-color-light);
+    color: var(--accent-color);
 }
 ul.list_blog_recur > li:hover > a > p.blog_list_recur_post_title {
     background-size: 100% 100%;
@@ -98,7 +98,7 @@ ul.list_blog_recur > li > a > p.blog_list_recur_post_title {
     margin: 5px 0;
 
     border-radius: 5px;
-    background-image: linear-gradient(120deg, var(--main-color-light) 0%, var(--main-color-light) 100%);
+    background-image: linear-gradient(120deg, var(--accent-color-light) 0%, var(--accent-color-light) 100%);
     background-repeat: no-repeat;
     background-size: 100% 0em;
     background-position: 0 85%;
