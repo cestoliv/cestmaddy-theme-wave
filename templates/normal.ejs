@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <% if(page_title == "") { %>
-        <title><%- site_title %></title>
+    <% if(normal.title == "") { %>
+        <title><%- site.title %></title>
     <% } else { %>
-        <title><%- page_title %> | <%- site_title %></title>
+        <title><%- normal.title %> | <%- site.title %></title>
     <% } %>
 
     <%- include("../../../../../templates/favicons.ejs") %>
@@ -16,7 +16,7 @@
 <body>
     <div class="header-box">
         <header class="markdown">
-            <%- html_header %>
+            <%- site.header %>
         </header>
         <div class="header-wave">
             <svg
@@ -30,7 +30,7 @@
         </div>
     </div>
     <div id="content" class="markdown">
-        <%- html_content %> 
+        <%- normal.html %> 
     </div>
     <div class="footer-box">
         <div class="footer-wave">
@@ -44,7 +44,7 @@
             </svg>
         </div>
         <footer class="markdown">
-            <%- html_footer %> 
+            <%- site.footer %> 
         </footer>
     </div>
 </body>
