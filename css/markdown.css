@@ -94,18 +94,19 @@
 }
 .markdown a {
     color: #0366d6;
-    color: var(--accent-color);
+    color: var(--main-color);
     text-decoration: underline;
+    font-weight: bold;
 }
 .markdown a:hover {
     text-decoration: underline;
 }
 .markdown strong {
     font-weight: bold;
-    color: var(--accent-color);
+    color: var(--main-color);
 }
 .markdown em {
-    color: var(--accent-color);
+    color: var(--main-color);
 }
 .markdown hr {
     height: 0;
@@ -147,7 +148,7 @@
 .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
     margin-top: 0;
     margin-bottom: 0;
-    color: var(--accent-color);
+    color: var(--main-color);
 }
 .markdown h1 {
     font-size: 32px;
@@ -487,6 +488,7 @@
     margin-bottom: 16px;
     font-weight: bold;
     line-height: 1.25;
+    font-family: Newsreader;
 }
 .markdown h1 {
     font-size: 2em;
@@ -517,7 +519,7 @@
     word-wrap: break-all;
 }
 .markdown li::marker {
-    color: var(--accent-color);
+    color: var(--main-color);
 }
 .markdown li>p {
     margin-top: 16px;
@@ -561,7 +563,6 @@
 .markdown img {
     max-width: 100%;
     box-sizing: initial;
-    background-color: #fff;
 }
 .markdown img[align=right] {
     padding-left: 20px;

@@ -1,3 +1,18 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@500&display=swap');
+ */
+@font-face {
+    font-family: 'Newsreader';
+    src: url('/front/themes/wave/font/Newsreader/Newsreader-Medium.eot');
+    src: url('/front/themes/wave/font/Newsreader/Newsreader-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/front/themes/wave/font/Newsreader/Newsreader-Medium.woff2') format('woff2'),
+        url('/front/themes/wave/font/Newsreader/Newsreader-Medium.woff') format('woff'),
+        url('/front/themes/wave/font/Newsreader/Newsreader-Medium.ttf') format('truetype'),
+        url('/front/themes/wave/font/Newsreader/Newsreader-Medium.svg#Newsreader-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --accent-color: #375662;
     --accent-color-light: #709fb0;
@@ -8,35 +23,49 @@
 body {
     margin: 0;
     padding: 0;
-    background: #fff;
+    background: #eaeaea;
     line-height: 1.5;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: start;
-    font-family: Arial, Helvetica, sans-serif;;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.body-content {
+    flex: 10;
 }
 
 header {
     text-align: center;
-    background: var(--main-color);
     display: flex;
     align-items: center;
     justify-content: start;
-    padding: 15px 30px 0px 15px;
+    padding: 15px 15px 7px 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: solid 4px var(--main-color);
+    border-top: solid 4px var(--main-color);
+    margin-top: 5px;
 }
 header > * {
     padding: 0 !important;
     margin: 0 !important;
 }
 
-header img {
-    max-width: 15rem !important;
-    width: 100% !important;
-    background: transparent !important;
+header > p {
+    flex: 10;
 }
 
-header a {
+header > h1 > a {
+    text-decoration: none !important;
+}
+
+header > h1 > a:hover {
+    text-decoration: none !important;
+}
+
+header > p > a {
     font-weight: bold !important;
     margin-left: 10px !important;
     margin-right: 10px !important;
@@ -45,7 +74,7 @@ header a {
     text-decoration: none !important;
 }
 
-header a:hover {
+header > p > a:hover {
     text-decoration: underline !important;
 }
 
@@ -54,7 +83,7 @@ header .spacer {
 }
 
 header *, footer * {
-    color: #fff !important;
+    color: var(--main-color) !important;
 }
 
 /* waves */
@@ -62,6 +91,15 @@ header *, footer * {
     display: flex;
     margin-top: -1px;
     margin-bottom: -1px;
+    position: absolute;
+    width: 100%;
+    z-index: -1000;
+}
+.header-wave {
+    top: 0;
+}
+.footer-wave {
+    bottom: 0;
 }
 .header-wave svg, .footer-wave svg {
     width: 100%;
@@ -77,14 +115,14 @@ header *, footer * {
     font-size: 1.2rem;
     flex: 3;
     overflow: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
 }
 
 .markdown h2 a {
     background: var(--accent-color);
     color: var(--white);
-    padding: 5px;
+    padding: 10px 10px 5px 10px;
     text-decoration: none;
     border-radius: 5px;
 }
@@ -124,20 +162,20 @@ header *, footer * {
 .social-icons svg {
     width: 2rem;
     height: 2rem;
-    fill: var(--white);
+    fill: var(--main-color);
     transition: fill .2s ease-in-out;
 }
 .social-icons a:hover svg {
-    fill: var(--accent-color-light);
+    fill: var(--accent-color);
 }
 .social-icons p {
     font-size: 0;
+    margin: 0;
 }
 /* end social icons */
 
 footer {
     text-align: center;
-    background: var(--main-color);
     padding: 0px 15px 20px 15px;
 }
 footer > * {
@@ -148,6 +186,7 @@ footer > * {
     #content {
         padding-left: 15%;
         padding-right: 15%;
+        padding-top: 1.5rem;
     }
 }
 
@@ -162,5 +201,15 @@ footer > * {
     #content {
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+    
+    header .social-icons {
+        display: none;
+    }
+}
+
+@media all and (max-width: 300px) {
+    header {
+        flex-direction: column;
     }
 }

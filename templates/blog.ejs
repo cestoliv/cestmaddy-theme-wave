@@ -3,49 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%- post.title %> | <%- site.title %></title>
+    <title><%- post_title %> | <%- site_title %></title>
 
     <%- include("../../../../../templates/favicons.ejs") %>
 
     <%- include("../../../../../templates/theme.ejs") %>
 </head>
 <body>
-    <div class="header-box">
-        <header class="markdown">
-            <%- site.header %>
-        </header>
-        <div class="header-wave">
-            <svg
-                id="wave"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 2440 150">
-                <path
-                    d="m 0,96 135.55556,10.7 C 271.11111,117 542.22222,139 813.33333,128 1084.4444,117 1355.5556,75 1626.6667,53.3 1897.7778,32 2168.8889,32 2304.4444,32 H 2440 V 0 H 2304.4444 C 2168.8889,0 1897.7778,0 1626.6667,0 1355.5556,0 1084.4444,0 813.33333,0 542.22222,0 271.11111,0 135.55556,0 H 0 Z"
-                    style="stroke-width:1.30171" />
-            </svg>
-        </div>
-    </div>
+    <header class="markdown">
+        <%- html_header %>
+    </header>
     <div id="content" class="markdown post_content">
-        <div class="enclosure_container" style="background-image: url('<%- post.enclosure %>')">
-            <h1 class="post_title"><%- post.title %></h1>
-            <p class="post_infos"><%- post.author.name %>, <strong><%- post.relative_date %></strong> <%- post.date_string %></p>
+        <div class="enclosure_container" style="background-image: url('<%- enclosure %>')">
+            <h1 class="post_title"><%- post_title %></h1>
+            <p class="post_infos"><%- post_author %>, <strong><%- post_relative_date %></strong> <%- post_date_string %></p>
         </div>
-        <%- post.html %>
+        <%- post_content %>
     </div>
-    <div class="footer-box">
-        <div class="footer-wave">
-            <svg
-                id="wave"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 2440 150">
-                <path
-                    d="m 2440,54.000004 -135.5556,-10.7 c -135.5555,-10.3 -406.6666,-32.3 -677.7777,-21.3 -271.1111,11 -542.2223,53 -813.33337,74.7 C 542.22222,118 271.11111,118 135.55556,118 H 0 v 32 h 135.55556 c 135.55555,0 406.66666,0 677.77777,0 271.11107,0 542.22227,0 813.33337,0 271.1111,0 542.2222,0 677.7777,0 H 2440 Z"
-                    style="stroke-width:1.30171" />
-            </svg>
-        </div>
-        <footer class="markdown">
-            <%- site.footer %> 
-        </footer>
-    </div>
+    <footer class="markdown">
+        <%- html_footer %> 
+    </footer>
 </body>
 </html>

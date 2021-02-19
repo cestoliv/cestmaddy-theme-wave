@@ -4,11 +4,10 @@
     background-size: 100%;
     background-position: 50% 50%;
     padding: 3% 7%;
-    border-radius: 25px 10px;
     margin-bottom: 3rem;
     margin-top: 2rem !important;
-    --enclosure-translate: 50%;
     transition: background-size .5s ease-in-out;
+    filter: grayscale(100%);
 }
 
 #content .enclosure_container:hover {
@@ -50,26 +49,16 @@ ul.list_blog_recur {
 }
 ul.list_blog_recur > li {
     padding: .5em;
-    border-radius: 5px;
+    border: var(--main-color) solid 3px;
 }
 ul.list_blog_recur > li:not(:last-child) {
     margin-bottom: 15px;
 }
-ul.list_blog_recur > li:nth-child(2n-1) {
-    background: var(--main-color);
-}
-ul.list_blog_recur > li:nth-child(2n) {
-    background: #e0e0e0;
-}
 ul.list_blog_recur > li > a {
     margin-bottom: 0;
     text-decoration: none;
-}
-ul.list_blog_recur > li:nth-child(2n-1) > a {
-    color: #fff;
-}
-ul.list_blog_recur > li:nth-child(2n) > a {
     color: var(--main-color);
+    font-weight: normal;
 }
 ul.list_blog_recur > li > a:hover {
     text-decoration: none;;
@@ -79,26 +68,18 @@ ul.list_blog_recur > li > a > p {
 }
 ul.list_blog_recur > li > a > p.blog_list_recur_post_date {
     font-size: .9em;
-    color: var(--accent-color);
 }
 ul.list_blog_recur > li:hover > a > p.blog_list_recur_post_title {
     background-size: 100% 100%;
-}
-ul.list_blog_recur > li:hover:nth-child(2n) > a > p.blog_list_recur_post_title {
-    color: #fff;
-}
-ul.list_blog_recur > li:nth-child(2n-1) > a > p.blog_list_recur_post_date strong {
-    color: #e0e0e0;
 }
 ul.list_blog_recur > li > a > p.blog_list_recur_post_title {
     font-weight: bold;
     font-size: 1.2em;
     display: inline-block;
-    padding: 5px 5px 0px 5px;
+    padding: 5px 0;
     margin: 5px 0;
 
-    border-radius: 5px;
-    background-image: linear-gradient(120deg, var(--accent-color-light) 0%, var(--accent-color-light) 100%);
+    background-image: linear-gradient(120deg, #c7c7c7 0%, #c7c7c7 100%);
     background-repeat: no-repeat;
     background-size: 100% 0em;
     background-position: 0 85%;
