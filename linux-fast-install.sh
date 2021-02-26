@@ -1,5 +1,5 @@
 # DOWNLOAD REPOSITORY
-rm -rdf res/content/front/themes/wave
+rm -Rf res/content/front/themes/wave
 git clone https://github.com/cestoliv/cestmaddy-theme-wave.git res/content/front/themes/wave
 
 # CHANGE THEME IN CONFIG
