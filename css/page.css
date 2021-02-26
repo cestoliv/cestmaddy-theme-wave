@@ -234,13 +234,13 @@ footer > * {
         padding-right: 1rem;
     }
     
-    header .social-icons {
+    header .head {
+        flex-wrap: wrap;
+    }
+    header .head .spacer:last-child {
         display: none;
     }
-}
-
-@media all and (max-width: 300px) {
-    header {
-        flex-direction: column;
+    header .social-icons {
+        width: 100%
     }
 }
