@@ -182,6 +182,37 @@ header *, footer * {
 }
 /* end list_image */
 
+/* iframe */
+
+iframe[src*="peertube"] {
+    width: 560px;
+    height: 315px;
+}
+
+@media all and (max-width: 680px) {
+    iframe[src*="peertube"] {
+        width: 360px;
+        height: 203px;
+    }
+}
+
+@media all and (max-width: 410px) {
+    iframe[src*="peertube"] {
+        width: 260px;
+        height: 146px;
+    }
+}
+
+@media all and (max-width: 300px) {
+    iframe[src*="peertube"] {
+        width: auto;
+        height: 120px;
+        max-width: 100%;
+    }
+}
+
+/* end iframe
+
 /* social icons */
 .social-icons {
     display: flex;
