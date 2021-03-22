@@ -6,3 +6,13 @@ h1, h2 {
 a {
     color: var(--main-color);
 }
+
+img {
+    max-width: 100%;
+    width: 100%;
+}
+
+iframe {
+    margin: 0 auto;
+    display: block;
+}

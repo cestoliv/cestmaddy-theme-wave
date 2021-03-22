@@ -115,7 +115,8 @@ header *, footer * {
 }
 
 #content {
-    max-width: 100rem;
+    max-width: 60rem;
+    margin: 0 auto;
     padding-left: 20%;
     padding-right: 20%;
     font-size: 1.2rem;

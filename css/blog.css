@@ -7,7 +7,7 @@
     margin-bottom: 3rem;
     margin-top: 2rem !important;
     transition: background-size .5s ease-in-out;
-    filter: grayscale(100%);
+    /*filter: grayscale(100%);*/
 }
 
 #content .enclosure_container:hover {
