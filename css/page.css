@@ -218,6 +218,7 @@ iframe[src*="peertube"] {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .social-icons a:not(:last-child) {
     margin-right: 15px;
@@ -274,5 +275,11 @@ footer > * {
     }
     header .social-icons {
         width: 100%
+    }
+}
+
+@media all and (max-width: 320px) {
+    header .head .spacer {
+        display: none;
     }
 }
